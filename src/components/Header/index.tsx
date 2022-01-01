@@ -217,17 +217,7 @@ export const StyledMenuButton = styled.button`
   }
 `
 
-// const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
-//   [ChainId.RINKEBY]: 'Rinkeby',
-//   [ChainId.ROPSTEN]: 'Ropsten',
-//   [ChainId.GÖRLI]: 'Görli',
-//   [ChainId.KOVAN]: 'Kovan',
-// }
-
 export default function Header() {
-  // const { account, chainId } = useActiveWeb3React()
-
-  // const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
   // const [isDark] = useDarkModeManager()
   // const [darkMode, toggleDarkMode] = useDarkModeManager()
 
@@ -246,42 +236,8 @@ export default function Header() {
           <StyledNavLink id="details-nav-link" to="/about">
             About
           </StyledNavLink>
-          {/* <StyledNavLink id="stake-nav-link" to="/pools">
-            Pools
-          </StyledNavLink>
-          <StyledNavLink id="stake-nav-link" to="/tokens">
-            Tokens
-          </StyledNavLink> */}
-          {/* <StyledNavLink id={`stake-nav-link`} to={'/wallet'}>
-            Wallet
-          </StyledNavLink> */}
         </HeaderLinks>
       </HeaderRow>
-      <HeaderControls>
-        {/* <HeaderElement>
-          <HideSmall>
-            {chainId && NETWORK_LABELS[chainId] && (
-              <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
-            )}
-          </HideSmall>
-          <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
-            {account && userEthBalance ? (
-              <BalanceText style={{ flexShrink: 0 }} pl="0.75rem" pr="0.5rem" fontWeight={500}>
-                {userEthBalance?.toSignificant(4)} ETH
-              </BalanceText>
-            ) : null}
-            <Web3Status />
-          </AccountElement>
-        </HeaderElement> */}
-        <HideMedium>
-          <HeaderElementWrap>
-            {/* <StyledMenuButton onClick={() => toggleDarkMode()}>
-            {darkMode ? <Moon size={20} /> : <Sun size={20} />}
-          </StyledMenuButton> */}
-            {/* <Menu /> */}
-          </HeaderElementWrap>
-        </HideMedium>
-      </HeaderControls>
     </HeaderFrame>
   )
 }
