@@ -1,0 +1,84 @@
+{
+  "name": "jpyc-info-unofficial",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": ".",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/rebass": "^4.0.8",
+    "@types/styled-components": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "babel-jest": "^26.6.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-webpack": "^0.13.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.0",
+    "react-scripts": "4.0.3"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.3.19",
+    "@types/gtag.js": "^0.0.5",
+    "dayjs": "^1.10.4",
+    "ethers": "^5.2.0",
+    "ga-4-react": "^0.1.281",
+    "graphql": "^15.5.0",
+    "graphql-tag": "^2.12.4",
+    "lightweight-charts": "^3.3.0",
+    "numbro": "^2.3.2",
+    "polished": "^4.1.2",
+    "react": "^17.0.2",
+    "react-device-detect": "^1.17.0",
+    "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9",
+    "react-router-dom": "^5.2.0",
+    "react-social-icons": "^5.4.1",
+    "rebass": "^4.0.7",
+    "recharts": "^2.0.9",
+    "styled-component": "^2.8.0",
+    "styled-components": "^5.3.0",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1",
+    "web3": "^1.3.6",
+    "web3-utils": "^1.3.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+      "*.{js,ts,tsx}": "eslint --cache --fix",
+      "*.ts": "bash -c tsc --noEmit",
+      "*.{js,ts,json}": "prettier --write"
+    }
+  }
+}
