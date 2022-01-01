@@ -22,7 +22,7 @@ export function getAnalyticsLink(exchange: Exchange): string {
       return 'https://info.uniswap.org/#/polygon/tokens/0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c'
     }
     case 'QUICK': {
-      return 'https://info.quickswap.exchange/token/0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c'
+      return 'https://info.quickswap.exchange/#/token/0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c'
     }
     default: {
       return ''
