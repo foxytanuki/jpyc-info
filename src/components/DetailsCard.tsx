@@ -42,7 +42,7 @@ function DetailsCard({ exchange, tokenData }: PropType) {
 
   const JPYCUSDColumn = exchange ? (
     <AutoColumn gap="4px">
-      <TYPE.main fontWeight={400}>Price - JPYC/USD</TYPE.main>
+      <TYPE.main fontWeight={400}>Price - JPYC/USDC</TYPE.main>
       <TYPE.label fontSize="24px">{formatDollarAmount(tokenData.priceUSD, 6)}</TYPE.label>
       <Percent value={tokenData.priceChangeUSD} />
     </AutoColumn>
@@ -72,7 +72,7 @@ function DetailsCard({ exchange, tokenData }: PropType) {
         {exchangeColumn}
         {JPYCUSDColumn}
         <AutoColumn gap="4px">
-          <TYPE.main fontWeight={400}>Price - USD/JPYC</TYPE.main>
+          <TYPE.main fontWeight={400}>Price - USDC/JPYC</TYPE.main>
           <TYPE.label fontSize="24px">{formatYenAmount(1 / tokenData.priceUSD)}</TYPE.label>
           {exchange && <Percent value={tokenData.priceChangeJPYC} />}
         </AutoColumn>
