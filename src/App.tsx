@@ -5,9 +5,10 @@ import { disableFragmentWarnings } from 'graphql-tag'
 import Home from './pages/Home'
 import About from './pages/About'
 import { LocalLoader } from './components/Loader'
-import { HideMedium } from './theme'
+import { HideMedium, OnlyMedium } from './theme'
 import TopBar from './components/Header/TopBar'
 import Header from './components/Header'
+import TopMobileBar from './components/Header/TopMobileBar'
 
 const AppWrapper = styled.div`
   display: flex;
@@ -72,6 +73,9 @@ function App() {
             <HideMedium>
               <TopBar />
             </HideMedium>
+            <OnlyMedium>
+              <TopMobileBar />
+            </OnlyMedium>
             <Header />
           </HeaderWrapper>
           <BodyWrapper>
