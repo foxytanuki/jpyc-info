@@ -61,7 +61,7 @@ const TopBar = () => {
         <AutoRow gap="8px" style={{ justifyContent: 'flex-end' }}>
           <StyledLink href="https://jpyc.jp/">JPYC Official Website</StyledLink>
           <StyledLink href="https://app.jpyc.jp/">JPYC Apps</StyledLink>
-          <StyledLink href="https://app.impermax.finance/lending-pool/0x7820fa98cca35142992eadf8a3c5044e1a82ac34">
+          <StyledLink href="https://polygon.impermax.finance/lending-pool/0x205995421c72dc223f36bbfad78b66eea72d2677">
             Impermax JPYC Lending Pool
           </StyledLink>
         </AutoRow>
