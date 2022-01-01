@@ -1,3 +1,1 @@
-# JPYC Info (Unofficial)
-
-TBD
+# JPYC Info
