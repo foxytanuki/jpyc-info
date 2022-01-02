@@ -24,22 +24,24 @@ function About() {
         <TYPE.black>
           <TYPE.black>万一、情報に誤りがあった場合においても制作者及び本サイトは一切の責任を負いかねます。</TYPE.black>
         </TYPE.black>
-        <TYPE.darkGray>
-          <SocialIcon
-            network="twitter"
-            style={{ height: 24, width: 24, margin: 8 }}
-            url="https://twitter.com/foxyTanuki"
-          />
-          <a href='https://twitter.com/foxyTanuki'>@foxyTanuki</a>
-        </TYPE.darkGray>
-        <TYPE.darkGray>
-          <SocialIcon
-            network="github"
-            style={{ height: 24, width: 24, margin: 8 }}
-            url="https://github.com/foxytanuki/jpyc-info"
-          />
-          <a href="https://github.com/foxytanuki/jpyc-info">foxytanuki/jpyc-info</a>
-        </TYPE.darkGray>
+        <TYPE.black>
+          <TYPE.black>
+            <SocialIcon
+              network="twitter"
+              style={{ height: 24, width: 24, margin: 8 }}
+              url="https://twitter.com/foxyTanuki"
+            />
+            <a href='https://twitter.com/foxyTanuki'>@foxyTanuki</a>
+          </TYPE.black>
+          <TYPE.black>
+            <SocialIcon
+              network="github"
+              style={{ height: 24, width: 24, margin: 8 }}
+              url="https://github.com/foxytanuki/jpyc-info"
+            />
+            <a href="https://github.com/foxytanuki/jpyc-info">foxytanuki/jpyc-info</a>
+          </TYPE.black>
+        </TYPE.black>
       </AutoColumn>
     </PageWrapper>
   )
