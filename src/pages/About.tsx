@@ -27,17 +27,21 @@ function About() {
         <TYPE.black>
           <TYPE.black>万一、情報に誤りがあった場合においても制作者及び本サイトは一切の責任を負いかねます。</TYPE.black>
         </TYPE.black>
-        <TYPE.black>
-          <TYPE.black>フィードバック、ご意見、その他連絡についてはTwitter及びDiscordまでお願いします。</TYPE.black>
-          <TYPE.black>こんな機能がほしい！というご意見も大歓迎です。</TYPE.black>
-        </TYPE.black>
         <TYPE.darkGray>
           <SocialIcon
             network="twitter"
-            style={{ height: 24, width: 24, margin: 4 }}
+            style={{ height: 24, width: 24, margin: 8 }}
             url="https://twitter.com/foxyTanuki"
           />
-          @foxyTanuki
+          <a href='https://twitter.com/foxyTanuki'>@foxyTanuki</a>
+        </TYPE.darkGray>
+        <TYPE.darkGray>
+          <SocialIcon
+            network="github"
+            style={{ height: 24, width: 24, margin: 8 }}
+            url="https://github.com/foxytanuki/jpyc-info"
+          />
+          <a href="https://github.com/foxytanuki/jpyc-info">foxytanuki/jpyc-info</a>
         </TYPE.darkGray>
       </AutoColumn>
     </PageWrapper>
