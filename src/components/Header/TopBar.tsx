@@ -22,7 +22,6 @@ const StyledLink = styled(ExternalLink)`
 `
 
 const TopBar = () => {
-  const [ethPrice] = useEthPrice('UNIV3')
   const jpyusdResult = useJPYUSDPrice()
   const jpyusdPrice = Number.parseFloat(`0.00${jpyusdResult}`)
   const usdjpyPrice = jpyusdPrice !== 0 ? 1 / jpyusdPrice : 0
@@ -50,12 +49,6 @@ const TopBar = () => {
       <RowBetween>
         {/* <Polling /> */}
         <AutoRow gap="6px">
-          <RowFixed key="ethprice">
-            <Item>ETH Price:</Item>
-            <Item fontWeight="700" ml="4px">
-              {formatDollarAmount(ethPrice)}
-            </Item>
-          </RowFixed>
           {jpyusdPrice !== 0 && usdjpyPrice !== 0 ? [jpyusdRow, usdjpyRow] : ''}
         </AutoRow>
         <AutoRow gap="8px" style={{ justifyContent: 'flex-end' }}>
