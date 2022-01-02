@@ -95,9 +95,9 @@ function Home() {
         </ContentLayout>
         <TYPE.main>Exchanges</TYPE.main>
         <DetailContentLayout>
-          <DetailsCard exchange="UNIV3" tokenData={uniV3} />
           <DetailsCard exchange="QUICK" tokenData={quick} />
           <DetailsCard exchange="SUSHI" tokenData={sushi} />
+          <DetailsCard exchange="UNIV3" tokenData={uniV3} />
         </DetailContentLayout>
       </AutoColumn>
     </PageWrapper>
