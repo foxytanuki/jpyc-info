@@ -14,15 +14,12 @@ function About() {
         <TYPE.largeHeader>JPYC Info</TYPE.largeHeader>
         <TYPE.black>
           <TYPE.black>Polygon MainnetのJPYC価格キュレーションサイトです。</TYPE.black>
-          <TYPE.black>現在は以下2つのDEXに対応しています。</TYPE.black>
+          <TYPE.black>現在は以下3つのDEXに対応しています。</TYPE.black>
         </TYPE.black>
         <TYPE.blue>
-          <TYPE.blue> - Uniswap V3</TYPE.blue>
           <TYPE.blue> - Quickswap</TYPE.blue>
-        </TYPE.blue>
-        <TYPE.black>以下のDEXは順次気が向けば対応します。</TYPE.black>
-        <TYPE.blue>
           <TYPE.blue> - Sushiswap</TYPE.blue>
+          <TYPE.blue> - Uniswap V3</TYPE.blue>
         </TYPE.blue>
         <TYPE.black>
           <TYPE.black>万一、情報に誤りがあった場合においても制作者及び本サイトは一切の責任を負いかねます。</TYPE.black>
