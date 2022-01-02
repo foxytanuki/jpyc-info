@@ -3,7 +3,7 @@ import { AbiItem } from 'web3-utils'
 export const JPYC_ADDRESS_ETH = '0x2370f9d504c7a6e775bf6e14b3f12846b594cd53'
 export const JPYC_ADDRESS_POLYGON = '0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c'
 export const JPYC_ADDRESS_BSC = ''
-export const INFURA_API1 = process.env.RPC_NODE || 'https://mainnet.infura.io/v3/89e295bc446a49aeb8165da52e911016'
+export const RPC_NODE = process.env.REACT_APP_RPC_NODE || 'https://mainnet.infura.io/v3/89e295bc446a49aeb8165da52e911016'
 export const CHAINLINK_JPY_ADDR = '0xBcE206caE7f0ec07b545EddE332A47C2F75bbeb3'
 export const BUNDLE_ID = '1'
 export const aggregatorV3InterfaceABI: AbiItem[] = [

@@ -5,14 +5,14 @@ import Web3 from 'web3'
 import { getClient, Exchange } from '../apollo/client'
 import { getBlock, getPercentChange } from '../utils/index'
 import { ETH_PRICE } from '../apollo/queries'
-import { aggregatorV3InterfaceABI, INFURA_API1, CHAINLINK_JPY_ADDR } from '../constants'
+import { aggregatorV3InterfaceABI, RPC_NODE, CHAINLINK_JPY_ADDR } from '../constants'
 
 const ETH_PRICE_KEY = 'ETH_PRICE_KEY'
 const ETH_ONE_DAY_PRICE_KEY = 'ETH_ONEDAY_PRICE_KEY'
 const ETH_PRICE_CHANGE_KEY = 'ETH_CHANGE_KEY'
 const JPYUSD_KEY = 'JPYUSD_KEY'
 
-const web3 = new Web3(INFURA_API1)
+const web3 = new Web3(RPC_NODE)
 
 const priceFeed = new web3.eth.Contract(aggregatorV3InterfaceABI, CHAINLINK_JPY_ADDR)
 interface ProviderType {
