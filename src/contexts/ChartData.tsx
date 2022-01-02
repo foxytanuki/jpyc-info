@@ -58,6 +58,7 @@ async function getChartData(address: string, exchange: Exchange) {
     totalValueLockedUSD?: string
     dailyVolumeUSD?: string
     totalLiquidityUSD?: string
+    liquidityUSD?: string
     priceUSD: string
   }[] = []
   const startTimestamp = 1619170975
@@ -88,6 +89,13 @@ async function getChartData(address: string, exchange: Exchange) {
           date: dayData.date,
           dailyVolumeUSD: parseFloat(dayData.volumeUSD),
           totalLiquidityUSD: parseFloat(dayData.totalValueLockedUSD),
+          priceUSD: parseFloat(dayData.priceUSD),
+        }
+      } else if (exchange === 'SUSHI' && dayData.volumeUSD && dayData.liquidityUSD) {
+        accum[roundedDate] = {
+          date: dayData.date,
+          dailyVolumeUSD: parseFloat(dayData.volumeUSD),
+          totalLiquidityUSD: parseFloat(dayData.liquidityUSD),
           priceUSD: parseFloat(dayData.priceUSD),
         }
       } else if (dayData.dailyVolumeUSD && dayData.totalLiquidityUSD) {
@@ -154,11 +162,9 @@ export async function useChartData(address: string, exchange: Exchange) {
 }
 
 function combineChartData(chartDatas: ChartData[][]) {
-  const [uniV3, quick] = chartDatas
-  const len = Math.min(uniV3?.length, quick?.length)
-  const maxLen = Math.max(uniV3?.length, quick?.length)
+  const [uniV3, quick, sushi] = chartDatas
+  const maxLen = Math.max(uniV3?.length, quick?.length, sushi?.length)
 
-  const tmp: any = []
   let combinedChartData: CombinedChartData[] = []
 
   const getMaxLenData = (data: ChartData[], maxLen: number) => {
@@ -251,6 +257,7 @@ export function useCombinedChartData() {
       const result = await Promise.all([
         getChartData(JPYC_ADDRESS_POLYGON, 'UNIV3'),
         getChartData(JPYC_ADDRESS_POLYGON, 'QUICK'),
+        getChartData(JPYC_ADDRESS_POLYGON, 'SUSHI'),
       ])
       const datas = result.map((chartData) => {
         const { data } = chartData

@@ -147,11 +147,12 @@ export const TOKEN_DATA = (tokenAddress: string, block: number | null, exchange:
 
 export const TOKEN_ALL_DAY_DATAS = (address: string, exchange: Exchange) => {
   const isV3 = exchange === 'UNIV3'
+  const isSUSHI = exchange === 'SUSHI'
   const TokenDayDataFields = `
     fragment TokenDayDataFields on TokenDayData {
       date
-      ${isV3 ? 'volumeUSD' : 'dailyVolumeUSD'}
-      ${isV3 ? 'totalValueLockedUSD' : 'totalLiquidityUSD'}
+      ${isV3 || isSUSHI ? 'volumeUSD' : 'dailyVolumeUSD'}
+      ${isV3 ? 'totalValueLockedUSD' : isSUSHI ? 'liquidityUSD' :'totalLiquidityUSD'}
       priceUSD
     }
   `
