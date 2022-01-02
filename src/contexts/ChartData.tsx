@@ -82,6 +82,11 @@ async function getChartData(address: string, exchange: Exchange) {
   }
 
   if (data) {
+    if(exchange === 'QUICK') {
+      // Remove first data since it is empty
+      data.shift()
+    }
+
     const formattedExisting = data.reduce((accum: { [date: number]: ChartData }, dayData) => {
       const roundedDate = parseInt((dayData.date / ONE_DAY_UNIX).toFixed(0))
       if (exchange === 'UNIV3' && dayData.volumeUSD && dayData.totalValueLockedUSD) {
