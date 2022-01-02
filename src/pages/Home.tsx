@@ -57,6 +57,7 @@ const ResponsiveRow = styled(RowBetween)`
 function Home() {
   const uniV3 = useTokenData(JPYC_ADDRESS_POLYGON, 'UNIV3')
   const quick = useTokenData(JPYC_ADDRESS_POLYGON, 'QUICK')
+  const sushi = useTokenData(JPYC_ADDRESS_POLYGON, 'SUSHI')
   const all = useCombinedTokenData(Network.ALL)
   const tokenData = all
 
@@ -96,6 +97,7 @@ function Home() {
         <DetailContentLayout>
           <DetailsCard exchange="UNIV3" tokenData={uniV3} />
           <DetailsCard exchange="QUICK" tokenData={quick} />
+          <DetailsCard exchange="SUSHI" tokenData={sushi} />
         </DetailContentLayout>
       </AutoColumn>
     </PageWrapper>
