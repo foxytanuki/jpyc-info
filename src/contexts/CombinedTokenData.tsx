@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer, useMemo, useCallback, useEffect, ReactNode } from 'react'
 import { TokenData, useTokenData } from './TokenData'
-import { JPYC_ADDRESS_ETH, JPYC_ADDRESS_POLYGON } from '../constants/index'
+import { JPYC_ADDRESS_POLYGON } from '../constants/index'
 
 export enum Network {
   ALL = 'all',
@@ -87,12 +87,9 @@ export function useCombinedTokenData(network: Network) {
   const combinedTokenData: TokenData = state?.[network]
   const uniV3 = useTokenData(JPYC_ADDRESS_POLYGON, 'UNIV3')
   const quick = useTokenData(JPYC_ADDRESS_POLYGON, 'QUICK')
-  let tokenDatas: TokenData[] = []
-  if (uniV3.priceUSD && quick.priceUSD) {
-    tokenDatas = [uniV3, quick]
-  } else if (quick.priceUSD) {
-    tokenDatas = [quick]
-  }
+  const sushi = useTokenData(JPYC_ADDRESS_POLYGON, 'SUSHI')
+
+  const tokenDatas: TokenData[] = [uniV3, quick, sushi].filter((data) => !!data.priceUSD)
 
   useEffect(() => {
     if (!combinedTokenData && uniV3.priceUSD && quick.priceUSD) {
