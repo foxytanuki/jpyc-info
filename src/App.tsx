@@ -63,8 +63,7 @@ function App() {
 
   disableFragmentWarnings()
 
-  // TODO: get subgraph status and display warning when its down
-  return (
+return (
     <Suspense fallback={null}>
       {loading ? (
         <LocalLoader fill />

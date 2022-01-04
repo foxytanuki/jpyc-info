@@ -24,6 +24,9 @@ export function getAnalyticsLink(exchange: Exchange): string {
     case 'QUICK': {
       return 'https://info.quickswap.exchange/#/token/0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c'
     }
+    case 'SUSHI': {
+      return 'https://analytics-polygon.sushi.com/tokens/0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c'
+    }
     default: {
       return ''
     }
@@ -37,6 +40,9 @@ export function getSwapLink(exchange: Exchange): string {
     }
     case 'QUICK': {
       return 'https://quickswap.exchange/#/swap?inputCurrency=0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c'
+    }
+    case 'SUSHI': {
+      return 'https://app.sushi.com/swap?inputCurrency=0x6ae7dfc73e0dde2aa99ac063dcf7e8a63265108c'
     }
     default: {
       return ''
