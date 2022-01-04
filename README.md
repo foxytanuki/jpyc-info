@@ -1,7 +1,7 @@
 # JPYC Info
 https://jpyc.foxytanuki.dev/
 
-Any help and contribution is welcome!
+Any help and contribution are welcome!
 
 ---
 
