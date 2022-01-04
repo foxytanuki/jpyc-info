@@ -2,6 +2,7 @@ import React, { Suspense, useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import styled from 'styled-components'
 import { disableFragmentWarnings } from 'graphql-tag'
+import ReactSimplePullToRefresh from 'react-simple-pull-to-refresh'
 import Home from './pages/Home'
 import About from './pages/About'
 import { LocalLoader } from './components/Loader'
@@ -78,13 +79,15 @@ function App() {
             </OnlyMedium>
             <Header />
           </HeaderWrapper>
-          <BodyWrapper>
-            <Switch>
-              <Route exact strict path="/" component={Home} />
-              <Route exact strict path="/about" component={About} />
-            </Switch>
-            <Marginer />
-          </BodyWrapper>
+          <ReactSimplePullToRefresh onRefresh={async ()=>{window.location.reload()}}>
+            <BodyWrapper>
+              <Switch>
+                <Route exact strict path="/" component={Home} />
+                <Route exact strict path="/about" component={About} />
+              </Switch>
+              <Marginer />
+            </BodyWrapper>
+          </ReactSimplePullToRefresh>
         </AppWrapper>
       )}
     </Suspense>
